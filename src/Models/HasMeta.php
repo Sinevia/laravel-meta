@@ -9,7 +9,7 @@ trait HasMetas {
      * @return string|null|any
      */
     public function getMeta($key, $default=null) {
-        return Metas::get($this->Id, $key, $default);
+        return Metas::get($this->getKey(), $key, $default);
     }
 
     /**
@@ -19,7 +19,7 @@ trait HasMetas {
      * @return boolean
      */
     public function setMeta($key, $value) {
-        return Metas::set($this->Id, $key, $value);
+        return Metas::set($this->getKey(), $key, $value);
     }
 
 }
