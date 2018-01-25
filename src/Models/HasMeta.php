@@ -4,8 +4,8 @@ namespace App\Models\Metas;
 
 trait HasMetas {
 
-    public function getMeta($key) {
-        return Metas::get($this->Id, $key);
+    public function getMeta($key, $default=null) {
+        return Metas::get($this->Id, $key, $default);
     }
 
     public function setMeta($key, $value) {
