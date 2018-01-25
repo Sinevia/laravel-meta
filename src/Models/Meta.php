@@ -49,10 +49,10 @@ class Meta extends \App\Models\BaseModel {
                         $table->string($o->primaryKey, 40)->primary();
                         $table->string('ObjectId', 40)->index();
                         $table->string('Key', 255)->index();
-                        $table->longtext('Value');
-                        $table->datetime('CreatedAt')->nullable();
-                        $table->datetime('UpdatedAt')->nullable();
-                        $table->datetime('DeletedAt')->nullable();
+                        $table->longtext('Value')->nullable()->default(NULL);
+                        $table->datetime('CreatedAt')->nullable()->default(NULL);
+                        $table->datetime('UpdatedAt')->nullable()->default(NULL);
+                        $table->datetime('DeletedAt')->nullable()->default(NULL);
                         $table->index(['ObjectId', 'Key']);
                     });
         }
