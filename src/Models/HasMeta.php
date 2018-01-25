@@ -2,8 +2,12 @@
 
 namespace App\Models\Metas;
 
-trait HasMetas {
-
+trait HasMetas {    
+    /**
+     * Returns the meta value, or default (null) if not found
+     * @param string $key
+     * @return string|null|any
+     */
     public function getMeta($key, $default=null) {
         return Metas::get($this->Id, $key, $default);
     }
