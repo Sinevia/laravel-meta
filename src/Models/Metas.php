@@ -1,6 +1,6 @@
 <?php
 
-namespace Sinevia\Metas;
+namespace Sinevia\Metas\Models;
 
 class Metas {
 
