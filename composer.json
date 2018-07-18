@@ -46,7 +46,7 @@
                 "Sinevia\\Meta\\MetaServiceProvider"
             ],
             "aliases": {
-                "Business": "Sinevia\\Meta\\Facade"
+                "Meta": "Sinevia\\Meta\\Facade"
             }
         }
     },
