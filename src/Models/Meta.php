@@ -29,7 +29,7 @@ class Meta extends \App\Models\BaseModel {
      * @param object $value
      * @return boolean
      */
-    public static function setValue($value) {
+    public function setValue($value) {
         $this->Value = json_encode($value);
         
         $isSaved = $this->save();
