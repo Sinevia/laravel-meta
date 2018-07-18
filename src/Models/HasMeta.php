@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models\Metas;
+namespace Sinevia\Meta\Models;
 
 trait HasMetas {    
     /**
