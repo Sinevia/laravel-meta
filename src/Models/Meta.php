@@ -1,6 +1,6 @@
 <?php
 
-namespace Sinevia\Meta\Models\Meta;
+namespace Sinevia\Meta\Models;
 
 class Meta extends \App\Models\BaseModel {
 
