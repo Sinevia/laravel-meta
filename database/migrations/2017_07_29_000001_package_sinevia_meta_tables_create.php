@@ -8,7 +8,7 @@ class PackageSineviaMetaTablesCreate extends Illuminate\Database\Migrations\Migr
      * @return void
      */
     public function up() {
-        App\Models\Metas\Meta::tableCreate();
+        Sinevia\Meta\Models\Meta::tableCreate();
     }
 
     /**
@@ -17,7 +17,7 @@ class PackageSineviaMetaTablesCreate extends Illuminate\Database\Migrations\Migr
      * @return void
      */
     public function down() {
-        App\Models\Metas\Meta::tableDelete();
+        Sinevia\Meta\Models\Meta::tableDelete();
     }
 
 }
