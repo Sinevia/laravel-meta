@@ -15,7 +15,7 @@ class Metas {
         return $meta->setValue($value);
     }
 
-    public static function get($objectId, $key, $defaut = null) {
+    public static function get($objectId, $key, $default = null) {
         $meta = Meta::where('ObjectId', $objectId)->where('Key', $key)->first();
         if ($meta == null) {
             return $default;
