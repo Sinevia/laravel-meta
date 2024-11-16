@@ -7,7 +7,7 @@ class Meta extends \AdvancedCamelCaseModel {
     protected $table = 'snv_metas_meta';
     protected $primaryKey = 'Id';
 
-    protected $useUniqueId = true;
+    public $useUniqueId = true;
     
     public function scopeObjectId($query,$objectId): mixed{
         return $query->where('ObjectId',$objectId);
