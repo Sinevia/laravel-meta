@@ -2,26 +2,26 @@
 
 namespace Sinevia\Meta\Models;
 
-class Meta extends \App\Models\BaseModel {
+class Meta extends \AdvancedCamelCaseModel {
 
     protected $table = 'snv_metas_meta';
     protected $primaryKey = 'Id';
+
+    protected $useUniqueId = true;
     
-    public function scopeObjectId($query,$objectId){
+    public function scopeObjectId($query,$objectId): mixed{
         return $query->where('ObjectId',$objectId);
     }
     
-    public function scopeKey($query,$key){
+    public function scopeKey($query,$key): mixed{
         return $query->where('Key',$key);
     }
     
     /**
      * Returns the value
-     * @param type $key
-     * @return string
      */
-    public function getValue() {
-        return json_decode($this->Value, true);
+    public function getValue(): mixed {
+        return json_decode(json: $this->Value, associative: true);
     }
 
     /**
@@ -29,8 +29,8 @@ class Meta extends \App\Models\BaseModel {
      * @param object $value
      * @return boolean
      */
-    public function setValue($value) {
-        $this->Value = json_encode($value);
+    public function setValue($value): bool {
+        $this->Value = json_encode(value: $value);
         
         $isSaved = $this->save();
         if ($isSaved != false) {

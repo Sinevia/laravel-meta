@@ -18,6 +18,7 @@
         }
     ],
     "require": {
+        "lesichkovm/laravel-advanced-model": "^1.9"
     },
     "require-dev": {
         "phpunit/phpunit": ">=5.4.3",
